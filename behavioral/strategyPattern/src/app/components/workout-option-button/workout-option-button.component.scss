@@ -1,0 +1,22 @@
+.workout-card {
+    border-radius: 50%;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    font-size: 40vw;
+}
+
+@media (orientation: portrait) {
+    .workout-card {
+        font-size: 40vw;
+    }
+}
+
+
+@media (orientation: landscape) {
+    .workout-card {
+        font-size: 40vh;
+    }
+}

@@ -1,0 +1,10 @@
+
+<ion-content>
+    <app-workout-option-button
+      *ngFor="let workout of workoutTypes"
+      [workout]="workout"
+      (click)="onWorkoutOptionClick(workout)"
+      class="workout-option-container"
+    >
+  </app-workout-option-button>
+</ion-content>

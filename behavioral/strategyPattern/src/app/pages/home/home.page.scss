@@ -1,0 +1,21 @@
+ion-content {
+    --background: linear-gradient(45deg, var(--ion-color-primary) 50%, var(--ion-color-tertiary) 100%);
+}
+
+@media (orientation: portrait) {
+    .workout-option-container {
+        width: calc(100vh / 3);
+        height: calc(100vh / 3);
+        display: flex;
+        margin: 0 auto;
+    }
+}
+
+@media (orientation: landscape) {
+    .workout-option-container {
+        width: calc(100vw / 3);
+        height: calc(100vw / 3);
+        margin: 16.5vh 0;
+        display: inline-flex;
+    }
+}
