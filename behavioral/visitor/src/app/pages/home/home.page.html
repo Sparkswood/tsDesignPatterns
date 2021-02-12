@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+      <ion-title>
+        <ion-input class="radius-input" placeholder="Input figure radius" [(ngModel)]="radius" type="number">
+        </ion-input>
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="onCalculateClick()" color="light" [disabled]="isInputInvalid()">
+          <ion-icon slot="icon-only" name="calculator"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <div class="main-container">
+    <ion-card class="figure" *ngFor="let figure of figures">
+      <div class="figure-background" [ngStyle]="{'background-image': 'url(' + figure.iconPath + ')'}"></div>
+      <ion-label class="volume-label">{{figure.volume}}</ion-label>
+    </ion-card>
+  </div>
+</ion-content>
