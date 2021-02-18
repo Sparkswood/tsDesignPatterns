@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Subject
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="boolean-buttons">
+      <ion-button (click)="setSubject(true)">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="setSubject(false)">
+        <ion-icon name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-button class="subscribe-button" (click)="subscribeSubject()">
+      Subscribe
+      <ion-icon name="notifications-circle-outline"></ion-icon>
+    </ion-button>
+    <ion-button color="secondary" class="subscribe-button"  (click)="unsubscribeSubject()">
+      Unsubscribe
+      <ion-icon name="notifications-off-circle-outline"></ion-icon>
+    </ion-button>
+
+    <p *ngFor="let record of records">{{record}}</p>
+  </div>
+</ion-content>
